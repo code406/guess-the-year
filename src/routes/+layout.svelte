@@ -1,7 +1,5 @@
 <script lang="ts">
     import "../app.css";
-    import '@picocss/pico';
-    import '@picocss/pico/css/pico.colors.min.css';
     import { Github, Globe, Moon } from 'lucide-svelte';
 
     const title = 'Guess The Year';
