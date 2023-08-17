@@ -23,12 +23,12 @@
 <article class="flex flex-col justify-center items-center">
     <!-- question -->
     <p class="opacity-70 pb-4">What year did the following event happen?</p>
-    <p class="text-2xl font-bold pb-10 text-center px-1">Sandra Day O'Connor becomes the first woman on the U.S. Supreme Court.</p>
+    <p class="text-2xl font-bold pb-8 text-center px-1">Sandra Day O'Connor becomes the first woman on the U.S. Supreme Court.</p>
 
     <!-- slider value -->
-    <div class="w-24">
+    <div class="w-28">
         <label for="guess-number" class="text-center">Guess:</label>
-        <input type="number" name="guess-number" bind:value="{guess}" class="text-center bold [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+        <input type="number" name="guess-number" bind:value="{guess}" class="text-xl text-center font-bold [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
     </div>
 
     <!-- slider -->
@@ -40,5 +40,5 @@
     <label for="guess-slider" class="text-xs opacity-50">drag the slider or type the answer</label>
 
     <!-- confirm button -->
-    <button role="button" class="mt-12 mb-2 py-2 px-4 w-1/2 font-bold">confirm</button>
+    <button role="button" class="mt-8 mb-1 py-2 px-4 w-1/2 font-bold">confirm</button>
 </article>
