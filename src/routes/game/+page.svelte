@@ -20,14 +20,14 @@
 </div>
 
 <!-- question area -->
-<article class="flex flex-col justify-center items-center">
+<article class="flex flex-col justify-center text-center items-center [text-wrap:balance]">
     <!-- question -->
     <p class="opacity-70 pb-4">What year did the following event happen?</p>
-    <p class="text-2xl font-bold pb-8 md:pb-10 text-center px-1">Sandra Day O'Connor becomes the first woman on the U.S. Supreme Court.</p>
+    <p class="text-2xl font-bold pb-8 md:pb-10 px-1">Sandra Day O'Connor becomes the first woman on the U.S. Supreme Court.</p>
 
     <!-- slider value -->
     <div class="w-28 md:mb-4">
-        <label for="guess-number" class="text-center">Guess:</label>
+        <label for="guess-number">Guess:</label>
         <input type="number" name="guess-number" bind:value="{guess}" class="text-xl text-center font-bold [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
     </div>
 

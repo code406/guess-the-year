@@ -12,7 +12,7 @@
             </ul>
             <ul>
                 <li class="py-0">
-                    <a href="/" class="flex flex-col font-bold my-2.5 md:3.5 items-center">
+                    <a href="/" class="flex flex-col font-bold my-1.5 sm:my-2.5 md:3.5 items-center">
                         <span class="text-xs text-[var(--pico-primary)]">YET ANOTHER</span>
                         <span class="text-2xl flex items-center space-x-2">guess the year</span>
                         <span class="text-xs text-[var(--pico-primary)]">GAME</span>
@@ -29,8 +29,8 @@
     
     <footer class="px-6 absolute bottom-0 w-full h-20">
         <div class="m-auto max-w-xl pt-6 text-sm opacity-95 flex">
-            <p class="flex-grow flex items-center"><HardHat size=18 color="var(--pico-primary)"/><span class="pl-1.5">Built by <a href="{githubLink}" role="link" class="secondary">code406</a></span></p>
-            <p class="flex-grow flex justify-end items-center"><Plug size=18 color="var(--pico-primary)"/><span class="pl-1">Powered by <a href="https://kit.svelte.dev" role="link" class="secondary">SvelteKit</a></span></p>
+            <p class="mr-4 flex-grow flex items-center"><HardHat size=18 color="var(--pico-primary)"/><span class="pl-1.5">Built by <a href="{githubLink}" role="link" class="secondary">code406</a></span></p>
+            <p class="ml-4 flex-grow flex justify-end items-center"><Plug size=18 color="var(--pico-primary)"/><span class="pl-1">Powered by <a href="https://kit.svelte.dev" role="link" class="secondary">SvelteKit</a></span></p>
         </div>
     </footer>
 </div>
