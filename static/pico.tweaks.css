@@ -32,8 +32,8 @@
     --pico-primary-inverse: #000;
     --pico-switch-color: var(--pico-background-color);
     --pico-ok: var(--pico-color-jade-300);
-    --pico-range-border-color: #d6d8de;
-    --pico-range-active-border-color: #d6d8de;
+    --pico-range-border-color: var(--pico-muted-color);
+    --pico-range-active-border-color: var(--pico-muted-color);
     --pico-range-thumb-border-color: var(--pico-background-color);
     --pico-range-thumb-color: var(--pico-primary-background);
   }
@@ -51,8 +51,8 @@
   --pico-primary-inverse: #000;
   --pico-switch-color: var(--pico-background-color);
   --pico-ok: var(--pico-color-jade-300);
-  --pico-range-border-color: #d6d8de;
-  --pico-range-active-border-color: #d6d8de;
+  --pico-range-border-color: var(--pico-muted-color);
+  --pico-range-active-border-color: var(--pico-muted-color);
   --pico-range-thumb-border-color: var(--pico-background-color);
   --pico-range-thumb-color: var(--pico-primary-background);
 }

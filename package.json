@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"lucide-svelte": "^0.268.0"
+		"lucide-svelte": "^0.268.0",
+		"svelte-fast-marquee": "^0.4.1"
 	}
 }

@@ -9,6 +9,7 @@ export default {
       '2xs': '425px',
       'xs': '500px',
       ...defaultTheme.screens,
+      '3xl': '1700px',
     },
     fontFamily: {
       sans: ['Rubik', 'ui-sans-serif', 'system-ui', 'sans-serif'],
