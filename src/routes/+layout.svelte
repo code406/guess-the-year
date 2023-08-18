@@ -6,7 +6,7 @@
 
 <div style="position: relative; min-height: 100vh; min-height: 100dvh;">
     <main class="container max-w-xl pb-20">
-        <nav class="py-4">
+        <nav class="py-4 mx-2">
             <ul>
                 <li><button class="as-link" on:click={() => document.documentElement.dataset.theme = 'light'}><SunMedium /></button></li>
             </ul>
