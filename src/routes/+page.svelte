@@ -1,6 +1,12 @@
-<article class="text-center flex flex-col justify-center items-center [text-wrap:balance] py-10 px-8">
-    <p class="text-xl w-11/12 3xs:w-3/4 2xs:w-3/5 xs:w-full">Guess the year when the event happened.</p>
-    <p class="text-xl w-10/12 3xs:w-4/6 2xs:w-7/12 xs:w-full mt-4 xs:mt-0">Answers range from 1900 to {new Date().getFullYear()}.</p>
-    <p class="mt-6 text-[var(--pico-muted-color)]">Playing Time: 1-2 minutes.</p>
-    <a href="/game" role="button" class="text-lg mt-8 py-2 font-bold">start game</a>
+<article class="text-center flex flex-col justify-center items-center py-10 px-8">
+    <p class="text-xl font-bold">
+        <span class="inline-block">Guess the year when</span>
+        <span class="inline-block">the event happened.</span>
+    </p>
+    <p class="text-sm mt-6 text-[var(--pico-muted-color)]">
+        <span class="inline-block">Answers range</span>
+        <span class="inline-block">from 1900 to {new Date().getFullYear()}.</span>
+    </p>
+    <p class="text-sm text-[var(--pico-muted-color)]">Playing time: 1-2 minutes.</p>
+    <a href="/game" role="button" class="text-lg w-40 sm:text-base mt-8 py-2 font-bold">start game</a>
 </article>

@@ -40,5 +40,5 @@
     <label for="guess-slider" class="text-xs opacity-50">drag the slider or type the answer</label>
 
     <!-- confirm button -->
-    <button role="button" class="mt-8 md:mt-12 mb-1 md:mb-2 py-2 px-4 w-1/2 font-bold">confirm</button>
+    <button role="button" class="text-lg sm:text-base mt-8 md:mt-12 mb-1 md:mb-2 py-2 px-4 w-2/5 font-bold">confirm</button>
 </article>
