@@ -1,7 +1,12 @@
 <script lang="ts">
     import "../app.css";
-    import { Github, SunMedium, Plug, HardHat } from 'lucide-svelte';
+    import { Github, SunMedium } from 'lucide-svelte';
     const githubLink = "https://github.com/code406";
+
+    // Vercel Web Analytics
+    import { dev } from '$app/environment';
+    import { inject } from '@vercel/analytics';
+    inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="wrapper relative flex flex-col">
