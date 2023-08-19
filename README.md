@@ -1,38 +1,21 @@
-# create-svelte
+# guess-the-year
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This project is a clone of David Han's
+[Guess the Year game](https://guess-the-year.davjhan.com/)
+that I'm building for fun, to learn and use various technologies.
 
-## Creating a project
+The app is currently deployed at https://guesstheyear.vercel.app.
 
-If you're seeing this, you've probably already done this step. Congrats!
+I'm using [SvelteKit](https://kit.svelte.dev/)
+(with Typescript) as the app framework, and
+[Pico CSS](https://v2.picocss.com/docs) + 
+[Tailwind CSS](https://tailwindcss.com/) for styles.
+Icons are from [Lucide](https://lucide.dev/) and the font is
+[Rubik](https://fonts.google.com/specimen/Rubik), from Google Fonts.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+If you want to run the app locally, clone the repo and run:
 
 ```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
