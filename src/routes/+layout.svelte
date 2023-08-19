@@ -10,7 +10,7 @@
 </script>
 
 <div class="wrapper relative flex flex-col">
-    <main class="container flex flex-col flex-grow max-w-2xl pb-14 2xs:pb-16">
+    <main class="container flex flex-col flex-grow max-w-3xl pb-14 2xs:pb-16">
         <nav class="py-4 mx-2">
             <ul>
                 <li><button class="as-link" on:click={() => document.documentElement.dataset.theme = 'light'}><SunMedium /></button></li>
@@ -33,11 +33,11 @@
     </main>
     
     <footer class="absolute bottom-0 w-full h-14 2xs:h-16">
-        <div class="m-auto max-w-2xl px-2 pt-3 2xs:pt-4 text-sm flex justify-between">
-            <p class="text-[var(--pico-muted-color)] mx-2 2xs:mx-4 sm:mx-0">
+        <div class="m-auto max-w-3xl px-2 pt-3 2xs:pt-4 text-sm flex justify-between">
+            <p class="text-[var(--pico-muted-color)] mx-2 2xs:mx-4">
                 Built by <a href="{githubLink}" role="link" class="secondary">code406</a>
             </p>
-            <p class="text-[var(--pico-muted-color)] mx-2 2xs:mx-4 sm:mx-0">
+            <p class="text-[var(--pico-muted-color)] mx-2 2xs:mx-4">
                 Powered by <a href="https://kit.svelte.dev" role="link" class="secondary">SvelteKit</a>
             </p>
         </div>

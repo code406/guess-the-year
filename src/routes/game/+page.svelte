@@ -56,7 +56,7 @@
     <div class="w-28 2xl:mb-4">
         <label for="guess-number">Guess:</label>
         <input type="number" name="guess-number" min={rangeStart} max={rangeEnd}
-            step=1 bind:value={guess} on:blur={fixGuess} class="text-xl text-center font-bold">
+            step=1 bind:value={guess} on:blur={fixGuess} class="text-xl text-center font-bold border-[var(--pico-primary)] border-2 rounded-md">
     </div>
 
     <!-- slider -->

@@ -23,8 +23,8 @@
     <Marquee direction="left" />
 </article>
 
-<article class="p-8">
-    <h2 class="text-xl py-1">About this project</h2>
+<article class="p-8 sm:py-10 sm:px-12">
+    <h2 class="font-sans text-xl py-1 font-bold opacity-90">About this project</h2>
     <p class="pt-6 text-[var(--pico-muted-color)]">
         This project is a clone of
         <a href="https://davjhan.com/" role="link" class="secondary">David Han</a>'s "Guess the Year game"
@@ -33,7 +33,7 @@
         so feel free to check it out!
     </p>
     <p class="pt-5 text-[var(--pico-muted-color)]">
-        Here's my experience so far:
+        Anyway, here's my experience so far:
     </p>
     <ul class="pl-8 pt-5 list-disc list-inside text-[var(--pico-muted-color)] space-y-5">
         <li>

@@ -1,3 +1,16 @@
+:root {
+  --pico-font-size: 100%;
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    --pico-font-size: 110%;
+  }
+}
+.container {
+  max-width: 100%;
+  padding-inline: var(--pico-spacing);
+}
+
 /* Amber color for light color scheme (Default) */
 /* Can be forced with data-theme="light" */
 [data-theme=light],
@@ -11,7 +24,7 @@
   --pico-primary-focus: rgba(183, 136, 0, 0.25);
   --pico-primary-inverse: #000;
   --pico-switch-color: var(--pico-secondary-hover);
-  --pico-ok: var(--pico-color-jade-500);
+  --pico-ok: #00895a;
   --pico-range-border-color: #d6d8de;
   --pico-range-active-border-color: #d6d8de;
   --pico-range-thumb-border-color: var(--pico-color);
@@ -31,7 +44,7 @@
     --pico-primary-focus: rgba(199, 148, 0, 0.25);
     --pico-primary-inverse: #000;
     --pico-switch-color: var(--pico-background-color);
-    --pico-ok: var(--pico-color-jade-300);
+    --pico-ok: #00c482;
     --pico-range-border-color: var(--pico-muted-color);
     --pico-range-active-border-color: var(--pico-muted-color);
     --pico-range-thumb-border-color: var(--pico-background-color);
@@ -50,7 +63,7 @@
   --pico-primary-focus: rgba(199, 148, 0, 0.25);
   --pico-primary-inverse: #000;
   --pico-switch-color: var(--pico-background-color);
-  --pico-ok: var(--pico-color-jade-300);
+  --pico-ok: #00c482;
   --pico-range-border-color: var(--pico-muted-color);
   --pico-range-active-border-color: var(--pico-muted-color);
   --pico-range-thumb-border-color: var(--pico-background-color);
