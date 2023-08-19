@@ -42,18 +42,19 @@
 </div>
 
 <!-- question area -->
-<article class="py-14 question-area flex flex-col justify-center text-center items-center [text-wrap:balance]">
+<article class="py-8 sm:py-10 question-area flex flex-col justify-center text-center items-center [text-wrap:balance]">
     <!-- question -->
     <p class="text-[var(--pico-muted-color)] pb-4">
         <span class="inline-block">What year did the following</span>
         <span class="inline-block">event happen?</span>
     </p>
-    <p class="text-xl 2xl:text-2xl font-bold pb-8 2xl:pb-10 px-1">
-        {@html question.question}
+    <!-- make question always take up same space. vertical center -->
+    <p class="text-xl 2xl:text-2xl font-bold pb-8 2xl:pb-10 px-1 h-32 4xs:h-28 xs:h-24 flex items-center">
+        <span>{@html question.question}</span>
     </p>
 
     <!-- slider value -->
-    <div class="w-28 2xl:mb-4">
+    <div class="w-28 3xs:mb-2 2xl:mb-4">
         <label for="guess-number">Guess:</label>
         <input type="number" name="guess-number" min={rangeStart} max={rangeEnd}
             step=1 bind:value={guess} on:blur={fixGuess} class="text-xl text-center font-bold border-[var(--pico-primary)] border-2 rounded-md">
