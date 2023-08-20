@@ -56,7 +56,6 @@
         </li>
     </ul>
     <p class="pt-5 text-[var(--pico-muted-color)]">
-        All in all, developer experience has been great. I use Django with vanilla
-        HTML, CSS and JavaScript at work, and the difference in convenience is huge.
+        All in all, developer experience has been great!
     </p>
 </article>
