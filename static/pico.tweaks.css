@@ -1,12 +1,18 @@
 :root {
     --pico-font-size: 100%;
-    --pico-transition: 0s;
 }
 
 @media only screen and (min-width: 768px) {
     :root {
         --pico-font-size: 110%;
     }
+}
+
+:where(:root), article, button, input, select, textarea {
+    transition: background-color 0.2s ease-in-out;
+}
+p, h1, h2, h3, h4, h5, h6, label {
+    transition: color 0.2s ease-in-out;
 }
 
 .container {
