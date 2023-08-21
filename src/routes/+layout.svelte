@@ -1,19 +1,34 @@
 <script lang="ts">
     import "../app.css";
-    import { Github, SunMedium } from 'lucide-svelte';
-    const githubLink = "https://github.com/code406";
-
-    // Vercel Web Analytics
-    import { dev } from '$app/environment';
+    import { Github, Moon, SunMedium } from 'lucide-svelte';
+    import { browser, dev } from '$app/environment';
     import { inject } from '@vercel/analytics';
-    inject({ mode: dev ? 'development' : 'production' });
+
+    const githubLink = "https://github.com/code406";
+    inject({ mode: dev ? 'development' : 'production' }); // Vercel Web Analytics
+    let theme: string;
+    if (browser) {
+        theme = document.documentElement.dataset.theme
+                || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+    function toggleTheme() {
+        if (theme === 'light') theme = 'dark';
+        else theme = 'light';
+        document.documentElement.dataset.theme = theme;
+        document.cookie = `preferredColorScheme=${theme};path=/;max-age=31536000`;
+    }
 </script>
 
 <div class="wrapper relative flex flex-col">
     <main class="container flex flex-col flex-grow max-w-3xl pb-14 2xs:pb-16">
         <nav class="py-4 mx-2">
             <ul>
-                <li><button class="as-link" on:click={() => document.documentElement.dataset.theme = 'light'}><SunMedium /></button></li>
+                <li>
+                    <button class="as-link" on:click={toggleTheme}>
+                        <div class="toggle-sun"><SunMedium /></div>
+                        <div class="toggle-moon"><Moon /></div>
+                    </button>
+                </li>
             </ul>
             <ul>
                 <li class="py-0">

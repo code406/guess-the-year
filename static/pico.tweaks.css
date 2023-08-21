@@ -20,6 +20,13 @@ p, h1, h2, h3, h4, h5, h6, label {
     padding-inline: var(--pico-spacing);
 }
 
+.toggle-sun {
+    display: var(--pico-display-sun);
+}
+.toggle-moon {
+    display: var(--pico-display-moon);
+}
+
 /* Amber color for light color scheme (Default) */
 /* Can be forced with data-theme="light" */
 [data-theme=light],
@@ -38,6 +45,8 @@ p, h1, h2, h3, h4, h5, h6, label {
     --pico-range-active-border-color: #d6d8de;
     --pico-range-thumb-border-color: var(--pico-color);
     --pico-range-thumb-color: var(--pico-primary-background);
+    --pico-display-moon: none;
+    --pico-display-sun: block;
 }
 
 /* Amber color for dark color scheme (Auto) */
@@ -58,6 +67,8 @@ p, h1, h2, h3, h4, h5, h6, label {
         --pico-range-active-border-color: var(--pico-muted-color);
         --pico-range-thumb-border-color: var(--pico-background-color);
         --pico-range-thumb-color: var(--pico-primary-background);
+        --pico-display-moon: block;
+        --pico-display-sun: none;
     }
 }
 
@@ -78,4 +89,6 @@ p, h1, h2, h3, h4, h5, h6, label {
     --pico-range-active-border-color: var(--pico-muted-color);
     --pico-range-thumb-border-color: var(--pico-background-color);
     --pico-range-thumb-color: var(--pico-primary-background);
+    --pico-display-moon: block;
+    --pico-display-sun: none;
 }
