@@ -80,10 +80,6 @@
         "question": "The beginning of the Great Depression"
     },
     {
-        "year": 1929,
-        "question": "The first <em>Academy Awards</em> are presented"
-    },
-    {
         "year": 1931,
         "question": "The <em>Empire State Building</em> is completed"
     },
@@ -133,7 +129,7 @@
     },
     {
         "year": 1940,
-        "question": "Winston Churchill becomes the Prime Minister of the U.K"
+        "question": "Winston Churchill becomes the Prime Minister of the U.K."
     },
     {
         "year": 1941,
@@ -185,7 +181,7 @@
     },
     {
         "year": 1947,
-        "question": "The <em>Central Intelligence Agency (CIA)</em> is created. "
+        "question": "The <em>Central Intelligence Agency (CIA)</em> is created"
     },
     {
         "year": 1947,
@@ -329,7 +325,7 @@
     },
     {
         "year": 1979,
-        "question": "Margaret Thatcher becomes the Prime Minister of the U.K"
+        "question": "Margaret Thatcher becomes the Prime Minister of the U.K."
     },
     {
         "year": 1979,
@@ -641,7 +637,7 @@
     },
     {
         "year": 1917,
-        "question": "The 18th Ammendment is passed, establish Prohibition in the U.S"
+        "question": "The 18th Ammendment is passed, establishing Prohibition in the U.S."
     },
     {
         "year": 1919,
@@ -673,7 +669,7 @@
     },
     {
         "year": 2015,
-        "question": "Same-sex marriage is legalized in all 50 states in the U.S"
+        "question": "Same-sex marriage is legalized in all 50 states in the U.S."
     },
     {
         "year": 1937,
