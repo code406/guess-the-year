@@ -1,6 +1,6 @@
 <script>
     import Marquee from '$lib/Marquee.svelte';
-    import { startYear, endYear } from '$lib/config';
+    import { startYear, endYear } from '$lib/Config.svelte';
 </script>
 
 <article class="px-0 py-2 mb-5 select-none"><Marquee /></article>

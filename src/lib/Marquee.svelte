@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { startYear, endYear } from '$lib/config';
+    import { startYear, endYear } from '$lib/Config.svelte';
 
     const years = Array
         .from({ length: endYear - startYear + 1 }, (_, i) => i + startYear)

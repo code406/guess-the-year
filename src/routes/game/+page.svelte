@@ -1,6 +1,6 @@
 <script lang="ts">
     import allQuestions from '$lib/questions.json';
-    import { startYear, endYear } from '$lib/config';
+    import { startYear, endYear } from '$lib/Config.svelte';
 
     const initialGuess = Math.round((startYear + endYear) / 2);
     let guess = initialGuess;
