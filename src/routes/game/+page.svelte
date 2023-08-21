@@ -1,9 +1,8 @@
 <script lang="ts">
     import allQuestions from '$lib/questions.json';
+    import { startYear, endYear } from '$lib/config';
 
-    const rangeStart = 1900;
-    const rangeEnd = new Date().getFullYear();
-    const initialGuess = Math.round((rangeStart + rangeEnd) / 2);
+    const initialGuess = Math.round((startYear + endYear) / 2);
     let guess = initialGuess;
 
     const initialState = {
@@ -19,7 +18,7 @@
     }
 
     function fixGuess() {
-        guess = guess ? Math.floor(Math.min(Math.max(guess, rangeStart), rangeEnd)) : initialGuess;
+        guess = guess ? Math.floor(Math.min(Math.max(guess, startYear), endYear)) : initialGuess;
     }
 
     function nextRound() {
@@ -56,16 +55,16 @@
     <!-- slider value -->
     <div class="w-28 3xs:mb-2 2xl:mb-4">
         <label for="guess-number">Guess:</label>
-        <input type="number" name="guess-number" min={rangeStart} max={rangeEnd}
+        <input type="number" name="guess-number" min={startYear} max={endYear}
             step=1 bind:value={guess} on:blur={fixGuess} class="text-xl text-center font-bold border-[var(--pico-primary-background)] border-2 rounded-md">
     </div>
 
     <!-- slider -->
     <div class="px-3 sm:px-6 flex w-full space-x-4 py-2">
-        <span>{rangeStart}</span>
-        <input type="range" name="guess-slider" min={rangeStart} max={rangeEnd}
+        <span>{startYear}</span>
+        <input type="range" name="guess-slider" min={startYear} max={endYear}
             step=1 bind:value={guess} class="pt-1">
-        <span>{rangeEnd}</span>
+        <span>{endYear}</span>
     </div>
     <label for="guess-slider" class="text-sm text-[var(--pico-muted-color)]">
         drag the slider or type the answer

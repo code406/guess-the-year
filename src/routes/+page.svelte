@@ -1,10 +1,9 @@
 <script>
     import Marquee from '$lib/Marquee.svelte';
+    import { startYear, endYear } from '$lib/config';
 </script>
 
-<article class="px-0 py-2 mb-5 select-none">
-    <Marquee direction="left" />
-</article>
+<article class="px-0 py-2 mb-5 select-none"><Marquee /></article>
 
 <article class="main-article text-center flex flex-col justify-center items-center py-12 2xs:py-16 mb-6">
     <p class="text-2xl font-bold">
@@ -13,15 +12,13 @@
     </p>
     <p class="text-sm mt-6 text-[var(--pico-muted-color)]">
         <span class="inline-block">Answers range</span>
-        <span class="inline-block">from 1900 to {new Date().getFullYear()}.</span>
+        <span class="inline-block">from {startYear} to {endYear}.</span>
     </p>
     <p class="text-sm text-[var(--pico-muted-color)]">Playing time: 1-2 minutes.</p>
     <a href="/game" role="button" class="text-lg w-40 sm:text-base mt-8 py-2 font-bold">start game</a>
 </article>
 
-<article class="px-0 py-2 mb-5 select-none">
-    <Marquee direction="left" />
-</article>
+<article class="px-0 py-2 mb-5 select-none"><Marquee /></article>
 
 <article class="p-8 sm:py-10 sm:px-12">
     <h2 class="font-sans text-xl py-1 font-bold opacity-90">About this project</h2>
