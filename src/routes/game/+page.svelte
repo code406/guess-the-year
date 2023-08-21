@@ -47,16 +47,16 @@
         <span class="inline-block">What year did the following</span>
         <span class="inline-block">event happen?</span>
     </p>
-    <!-- make question always take up same space. vertical center -->
-    <p class="text-xl 2xl:text-2xl font-bold pb-8 2xl:pb-10 px-1 h-32 4xs:h-28 xs:h-24 flex items-center">
+    <p class="text-xl xs:text-2xl font-bold pb-8 px-1 h-32 4xs:h-28 xs:h-24 flex items-center">
         <span>{@html question.question}</span>
     </p>
 
     <!-- slider value -->
-    <div class="w-28 3xs:mb-2 2xl:mb-4">
+    <div class="w-28 3xs:mb-2">
         <label for="guess-number">Guess:</label>
         <input type="number" name="guess-number" min={startYear} max={endYear}
-            step=1 bind:value={guess} on:blur={fixGuess} class="text-xl text-center font-bold border-[var(--pico-primary-background)] border-2 rounded-md">
+            step=1 bind:value={guess} on:blur={fixGuess}
+            class="text-xl text-center font-bold border-[var(--pico-primary-background)] border-2 rounded-md">
     </div>
 
     <!-- slider -->
@@ -66,14 +66,12 @@
             step=1 bind:value={guess} class="pt-1">
         <span>{endYear}</span>
     </div>
-    <label for="guess-slider" class="text-sm text-[var(--pico-muted-color)]">
+    <label for="guess-slider" class="mb-8 text-sm text-[var(--pico-muted-color)]">
         drag the slider or type the answer
     </label>
 
     <!-- confirm button -->
-    <button role="button"
-        class="text-lg sm:text-base mt-8 2xl:mt-12 mb-1 2xl:mb-2 py-2 px-4 w-2/5 font-bold"
-        on:click={nextRound}>
+    <button role="button" class="text-lg sm:text-base mb-1 py-2 px-4 w-2/5 font-bold" on:click={nextRound}>
         confirm
     </button>
 </article>

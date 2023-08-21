@@ -3,6 +3,8 @@
     import { Github, Moon, SunMedium } from 'lucide-svelte';
     import { browser, dev } from '$app/environment';
     import { inject } from '@vercel/analytics';
+    import { fly } from "svelte/transition";
+    export let data: { url: string }; // from layout.ts
 
     const githubLink = "https://github.com/code406";
     inject({ mode: dev ? 'development' : 'production' }); // Vercel Web Analytics
@@ -44,7 +46,11 @@
             </ul>
         </nav>
     
-        <slot />
+        {#key data.url }
+        <div in:fly>
+            <slot />
+        </div>
+        {/key}
     </main>
     
     <footer class="absolute bottom-0 w-full h-14 2xs:h-16">
