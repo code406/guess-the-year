@@ -97,7 +97,7 @@
 
         {#if state === 'gameover'}
         <Typewriter cursor={false} delay={100} interval={60}>
-            <h2 class="font-sans text-2xl xs:text-3xl font-bold mt-2.5 mb-0.5 text-[var(--pico-secondary)] opacity-90">GAME OVER</h2>
+            <h2 class="font-sans text-2xl xs:text-3xl font-bold mt-2.5 mb-0.5 text-[var(--pico-muted-color)]">GAME OVER</h2>
         </Typewriter>
         <div class="h-[19.75rem] xs:h-[19.5rem] flex flex-col items-center justify-center space-y-5">
             <p in:fade={{delay: 1200}} class="flex flex-col items-center justify-center space-y-1 xs:space-y-2">
