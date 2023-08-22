@@ -32,7 +32,7 @@
             </ul>
             <ul>
                 <li class="py-0">
-                    <a href="/" class="flex flex-col font-bold my-1.5 lg:my-2 items-center">
+                    <a href="/" class="flex flex-col font-bold my-0.5 lg:my-1 items-center">
                         <span class="text-xs text-[var(--pico-primary)]">YET ANOTHER</span>
                         <span class="text-2xl flex items-center space-x-2">guess the year</span>
                         <span class="text-xs text-[var(--pico-primary)]">GAME</span>

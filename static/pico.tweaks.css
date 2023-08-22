@@ -41,6 +41,8 @@ p, h1, h2, h3, h4, h5, h6, label {
     --pico-primary-inverse: #000;
     --pico-switch-color: var(--pico-secondary-hover);
     --pico-ok: #00895a;
+    --pico-ok-bg: #54c59f5b;
+    --pico-error-bg: #d783835b;
     --pico-range-border-color: #d6d8de;
     --pico-range-active-border-color: #d6d8de;
     --pico-range-thumb-border-color: var(--pico-color);
@@ -63,6 +65,8 @@ p, h1, h2, h3, h4, h5, h6, label {
         --pico-primary-inverse: #000;
         --pico-switch-color: var(--pico-background-color);
         --pico-ok: #00c482;
+        --pico-ok-bg: #22926d5b;
+        --pico-error-bg: #9930415b;
         --pico-range-border-color: var(--pico-muted-color);
         --pico-range-active-border-color: var(--pico-muted-color);
         --pico-range-thumb-border-color: var(--pico-background-color);
@@ -85,6 +89,8 @@ p, h1, h2, h3, h4, h5, h6, label {
     --pico-primary-inverse: #000;
     --pico-switch-color: var(--pico-background-color);
     --pico-ok: #00c482;
+    --pico-ok-bg: #22926d5b;
+    --pico-error-bg: #9930415b;
     --pico-range-border-color: var(--pico-muted-color);
     --pico-range-active-border-color: var(--pico-muted-color);
     --pico-range-thumb-border-color: var(--pico-background-color);
