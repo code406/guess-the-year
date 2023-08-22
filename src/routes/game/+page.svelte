@@ -1,7 +1,7 @@
 <script lang="ts">
     import allQuestions from '$lib/questions.json';
     import { startYear, endYear } from '$lib/Config.svelte';
-    import { fly, scale } from 'svelte/transition';
+    import { fade, fly, scale } from 'svelte/transition';
     import { tweened } from 'svelte/motion';
     import Typewriter from 'svelte-typewriter'
 
@@ -31,6 +31,26 @@
 
     function getQuestions() {
         return allQuestions.sort(() => Math.random() - 0.5);
+    }
+
+    const grades = [
+        { grade: "Oops!", atLeast: -Infinity, description: "Something went wrong..."},
+        { grade: "So bad, it's good", atLeast: 0, description: "It's hard to get a score this low on purpose." },
+        { grade: "Absolutely Terrible", atLeast: 2, description: "You should be embarrassed." },
+        { grade: "Very Bad", atLeast: 4, description: "It's very bad." },
+        { grade: "Bad", atLeast: 5, description: "It's very bad." },
+        { grade: "Decent", atLeast: 7, description: "It's an ok score." },
+        { grade: "Not Bad", atLeast: 9, description: "Not bad, but you can do better." },
+        { grade: "Average", atLeast: 10, description: "You should feel satisfied with this score." },
+        { grade: "Above Average", atLeast: 11, description: "This was my personal high score." },
+        { grade: "Good", atLeast: 12, description: "Quite good. You can close the tab now." },
+        { grade: "Great", atLeast: 15, description: "This is very impressive." },
+        { grade: "Excellent", atLeast: 20, description: "Well done! This is the third highest grade." },
+        { grade: "Superb", atLeast: 25, description: "Well done! This is the second highest grade." },
+        { grade: "Perfect", atLeast: 30, description: "The highest grade! You probably cheated." },
+    ]
+    function getGrade(score: number) {
+        return grades.reduce((acc, cur) => score >= cur.atLeast ? cur : acc, grades[0]);
     }
 
     function pressNext() {
@@ -73,24 +93,23 @@
     </div>
 
     <!-- question area -->
-    <article class="h-[32rem] py-7 3xs:py-9 sm:py-10 flex flex-col justify-center text-center items-center [text-wrap:balance]">
+    <article class="h-[32rem] py-8 sm:py-10 flex flex-col justify-center text-center items-center [text-wrap:balance]">
 
         {#if state === 'gameover'}
-        <div class="text-center mx-auto">
-            <Typewriter cursor={false} delay={100} interval={60}>
-                <h2 class="font-sans text-2xl xs:text-3xl font-bold mt-4 mb-12 text-[var(--pico-secondary)] opacity-90">GAME OVER</h2>
-            </Typewriter>
-            <p in:fly={{delay: 1200}} class="text-xl my-8">
-                You scored
-                <span class="bg-[var(--pico-ok-bg)] px-3 py-1.5 text-2xl ml-1 mr-0.5 font-bold rounded-lg">{round}</span>
-                points.
+        <Typewriter cursor={false} delay={100} interval={60}>
+            <h2 class="font-sans text-2xl xs:text-3xl font-bold mt-2.5 mb-0.5 text-[var(--pico-secondary)] opacity-90">GAME OVER</h2>
+        </Typewriter>
+        <div class="h-[19.75rem] xs:h-[19.5rem] flex flex-col items-center justify-center space-y-5">
+            <p in:fade={{delay: 1200}} class="flex flex-col items-center justify-center space-y-1 xs:space-y-2">
+                <span>Score:</span>
+                <span class="bg-[var(--pico-ok-bg)] pl-3 pr-3.5 py-1.5 text-3xl font-bold rounded-lg">{round}</span>
             </p>
-            <div in:fly={{delay: 2000}} class="mt-16 mb-6">
-                <span class="text-xl">Grade:</span>
-                <span class="bg-[var(--pico-ok-bg)] px-3 py-2 text-xl ml-2 mr-0.5 font-bold rounded-lg">Absolutely Terrible</span>
-            </div>
-            <div in:fly={{delay: 2000}} class="w-full flex flex-col items-center">
-                <p class="text-lg h-20 mb-9 xs:mb-8 w-5/6">I'm still figuring out if that's good or bad...</p>
+            <p in:fade={{delay: 2000}} class="flex flex-col items-center justify-center space-y-1 xs:space-y-2">
+                <span>Grade:</span>
+                <span class="bg-[var(--pico-ok-bg)] pl-3 pr-3.5 py-2 text-xl mx-3 font-bold rounded-lg">{getGrade(round).grade}</span>
+            </p>
+            <div in:fade={{delay: 2000}} class="w-full flex flex-col items-center">
+                <p class="mx-5 mb-4">{getGrade(round).description}</p>
             </div>
         </div>
 
@@ -154,7 +173,7 @@
         {#key buttonTrigger}
         <button
             in:fly={{delay:buttonDelay}} on:click={pressNext} role="button"
-            class="text-xl my-2 py-2 px-4 w-3/5 sm:w-2/5 font-bold" disabled={buttonDisabled}>
+            class="text-lg my-2 py-2 px-4 w-52 font-bold" disabled={buttonDisabled}>
             {#if state === 'guess'}confirm{:else if state === 'answer'}continue{:else}play again{/if}
         </button>
         {/key}
