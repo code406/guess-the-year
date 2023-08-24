@@ -140,7 +140,7 @@
                 class="text-xl text-center font-bold border-[var(--pico-primary-background)] border-2 rounded-md">
         </div>
         <!-- guess range slider -->
-        <div class="px-3 sm:px-6 flex w-full space-x-4 pt-4">
+        <div class="px-1 xs:px-6 flex w-full space-x-2.5 xs:space-x-4 pt-4">
             <span>{startYear}</span>
             <input type="range" name="guess-slider" min={startYear} max={endYear}
                 step=1 bind:value={guess} class="pt-1">
