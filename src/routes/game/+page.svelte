@@ -97,16 +97,22 @@
 
         {#if state === 'gameover'}
         <Typewriter cursor={false} delay={100} interval={60}>
-            <h2 class="font-sans text-2xl xs:text-3xl font-bold mt-2.5 mb-0.5 text-[var(--pico-muted-color)]">GAME OVER</h2>
+            <h2 class="font-sans text-2xl xs:text-3xl font-bold mt-2.5 mb-0.5 text-[var(--pico-muted-color)]">
+                GAME OVER
+            </h2>
         </Typewriter>
         <div class="h-[19.75rem] xs:h-[19.5rem] flex flex-col items-center justify-center space-y-5">
             <p in:fade={{delay: 1200}} class="flex flex-col items-center justify-center space-y-1 xs:space-y-2">
                 <span>Score:</span>
-                <span class="bg-[var(--pico-ok-bg)] pl-3 pr-3.5 py-1.5 text-3xl font-bold rounded-lg">{round}</span>
+                <span class="bg-[var(--pico-ok-bg)] pl-3 pr-3.5 py-1.5 text-3xl font-bold rounded-lg">
+                    {round}
+                </span>
             </p>
             <p in:fade={{delay: 2000}} class="flex flex-col items-center justify-center space-y-1 xs:space-y-2">
                 <span>Grade:</span>
-                <span class="bg-[var(--pico-ok-bg)] pl-3 pr-3.5 py-2 text-xl mx-3 font-bold rounded-lg">{getGrade(round).grade}</span>
+                <span class="bg-[var(--pico-ok-bg)] pl-3 pr-3.5 py-2 text-xl mx-3 font-bold rounded-lg">
+                    {getGrade(round).grade}
+                </span>
             </p>
             <div in:fade={{delay: 2000}} class="w-full flex flex-col items-center">
                 <p class="mx-5 mb-4">{getGrade(round).description}</p>
@@ -122,7 +128,6 @@
         {#key question.question}
         <p in:fly class="text-xl xs:text-2xl font-bold pt-2 pb-6 px-1 h-24 flex items-center">
             <span>{@html question.question}</span>
-            <!-- <span>9.3 magnitude earthquake and tsunami strike Indonesia on Dec. 26th</span> -->
         </p>
         {/key}
 
@@ -149,21 +154,27 @@
         <div class="flex space-x-5">
             <div class="w-24 3xs:mb-2">
                 <label for="guess-locked">Guess:</label>
-                <input name="guess-locked" bind:value={guess} disabled class="text-xl text-center font-bold border-[var(--pico-primary-background)] border-2 rounded-md">
+                <input name="guess-locked" bind:value={guess} disabled
+                    class="text-xl text-center font-bold border-[var(--pico-primary-background)] border-2 rounded-md">
             </div>
             <div in:fly={{delay: 400}} class="w-24 3xs:mb-2">
                 <label for="answer">Answer:</label>
-                <input name="answer" bind:value={question.year} disabled class="text-xl text-center font-bold border-[var(--pico-ok)] border-2 rounded-md">
+                <input name="answer" bind:value={question.year} disabled
+                    class="text-xl text-center font-bold border-[var(--pico-ok)] border-2 rounded-md">
             </div>
         </div>
         <div in:fly={{delay: 800}} class="text-lg my-3.5">
             <span>Missed by:</span>
-            <span class="bg-[var(--pico-error-bg)] px-2.5 py-1 text-xl ml-1 mr-0.5 font-bold rounded-lg">{margin}</span>
+            <span class="bg-[var(--pico-error-bg)] px-2.5 py-1 text-xl ml-1 mr-0.5 font-bold rounded-lg">
+                {margin}
+            </span>
             <span class="font-bold">years</span>
         </div>
         <div in:fly={{delay: 1200}} class="mb-9">
             <span>Lives remaining:</span>
-            <span class="bg-[var(--pico-ok-bg)] px-2 py-0.5 mx-1 font-bold text-lg rounded-lg">{$tween}</span>
+            <span class="bg-[var(--pico-ok-bg)] px-2 py-0.5 mx-1 font-bold text-lg rounded-lg">
+                {$tween}
+            </span>
         </div>
         {/if}
 
